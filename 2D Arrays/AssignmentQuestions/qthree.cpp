@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void print(char mat[3][2],int row,int col){
+void print(char mat[3][3],int row,int col){
 
     cout << "After Transpose :" <<endl;
     for(int i=0; i<row; i++){
@@ -15,9 +15,9 @@ void print(char mat[3][2],int row,int col){
 
 }
 
-void Transpose(char mat[2][3],int row,int col){
+void Transpose(char mat[3][3],int row,int col){
 
-    char newMat[3][2];
+    char newMat[3][3];
     cout << "Before Transpose :" <<endl;
 
     for(int i=0; i<row; i++){
@@ -28,15 +28,17 @@ void Transpose(char mat[2][3],int row,int col){
         cout << endl;
     }
 
-    print(newMat,3,2);
+    print(newMat,3,3);
 }
 
 
 int main(){
 
-    char mat[2][3] = {{'a','b','c'},
-                      {'d','e','f'}};
-    Transpose(mat,2,3);
+    char mat[3][3] = {{'1','2','3'},
+                      {'4','5','6'},{
+                        '7','8','9'
+                      }};
+    Transpose(mat,3,3);
 
     return 0;
 }
